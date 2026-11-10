@@ -1,0 +1,17 @@
+---
+title: "Crypto Markets"
+author: "Copilot"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(arrow)
+```
+
+```{r}
+print(arrow::open_dataset("data/daily_prices.parquet")$schema)
+```
